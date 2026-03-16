@@ -6,18 +6,18 @@ AI-powered customs data optimization pipeline that processes customer-uploaded t
 
 ```
 ┌──────────────────────────────────────────────┐
-│  Next.js Frontend (Vercel / localhost:3000)   │
-│  File upload → Pipeline toggles → Live status │
-│  Step cards → Progressive analytics           │
+│  Next.js Frontend (Vercel / localhost:3000)  │
+│  File upload → Pipeline toggles → Live status│
+│  Step cards → Progressive analytics          │
 └──────────────────┬───────────────────────────┘
                    │ REST API (polling every 2s)
 ┌──────────────────▼───────────────────────────┐
-│  FastAPI Backend (Docker / localhost:8000)     │
-│  ┌──────────────────────────────────────┐     │
-│  │  Pipeline Orchestrator               │     │
-│  │  Step 1 → Step 2 → Step 3           │     │
-│  └──────────────────────────────────────┘     │
-│  PostgreSQL 16 │ Qdrant Vector DB │ OpenAI    │
+│  FastAPI Backend (Docker / localhost:8000)   │
+│  ┌──────────────────────────────────────┐    │
+│  │  Pipeline Orchestrator               │    │
+│  │  Step 1 → Step 2 → Step 3            │    │
+│  └──────────────────────────────────────┘    │
+│  PostgreSQL 16 │ Qdrant Vector DB │ OpenAI   │
 └──────────────────────────────────────────────┘
 ```
 
@@ -67,6 +67,7 @@ cp .env.example .env
 
 pip install -r requirements.txt
 python scripts/init_db.py
+python scripts/ingest_data.py data/aidump_80_.xlsx # python scripts/ingest_data.py data/aidump_80_.xlsx --max-rows 1000 # for testing on 1000 rows
 uvicorn app.main:app --reload
 ```
 Backend API: http://localhost:8000/docs
