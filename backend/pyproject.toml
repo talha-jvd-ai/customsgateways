@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "customs-pipeline"
+version = "1.0.0"
+description = "CustomsGateways AI-Powered Data Optimization Pipeline"
+authors = ["Talha"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.0"}
+uvicorn = {extras = ["standard"], version = "^0.34.0"}
+pydantic = "^2.10.0"
+pydantic-settings = "^2.7.0"
+openai = "^1.60.0"
+qdrant-client = "^1.13.0"
+psycopg2-binary = "^2.9.9"
+sqlalchemy = "^2.0.36"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+python-multipart = "^0.0.18"
+tenacity = "^9.0.0"
+chardet = "^5.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+ruff = "^0.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

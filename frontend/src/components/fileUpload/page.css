@@ -1,0 +1,128 @@
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  height: fit-content;
+}
+.file-upload-header {
+  display: flex;
+  flex-direction: column;
+}
+.drop-zone {
+  border: 2px dashed #668dc9;
+  border-radius: 12px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #668dc917;
+  transition: all 0.3s ease;
+}
+.drop-zone.dragging {
+  background-color: #e8f0fe;
+  border-color: #4a7bc8;
+}
+.upload-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 1.2;
+  margin-bottom: 18px;
+}
+.upload-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #324168;
+  margin: 0;
+}
+.upload-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+.choose-file-btn {
+  padding: 12px 20px;
+  border: 1.5px solid #4b5779;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #324168;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+.choose-file-btn:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+  transform: scale(1.01);
+}
+.selected-file {
+  font-size: 12px;
+  color: #668dc9;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.start-process-btn {
+  margin-top: 10px;
+}
+/* Uploaded state */
+.uploaded-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 30px;
+  background-color: #f0f7ff;
+  border-radius: 12px;
+  border: 1.5px solid #668dc9;
+}
+.uploaded-icon {
+  margin-bottom: 4px;
+}
+.uploaded-filename {
+  font-size: 14px;
+  font-weight: 600;
+  color: #324168;
+  word-break: break-all;
+  text-align: center;
+}
+.uploaded-info {
+  font-size: 13px;
+  color: #64748b;
+}
+.upload-again-btn {
+  padding: 8px 16px;
+  border: 1.5px solid #4b5779;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #324168;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 4px;
+  width: auto;
+}
+.upload-again-btn:hover {
+  background-color: #f1f5f9;
+}
+.error-text {
+  color: #dc2626;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px;
+  background-color: #fef2f2;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .file-upload-container {
+    padding: 20px;
+  }
+  .drop-zone {
+    padding: 40px 20px;
+  }
+}

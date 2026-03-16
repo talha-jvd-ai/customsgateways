@@ -1,0 +1,6 @@
+import React from "react";
+import "./HubComparison.css";
+const HubComparison = ({ comparisons }) => (
+  <div className="hub-comparison-container"><h4 className="hub-comparison-title">Hub Comparisons</h4><div className="hub-comparison-list">{comparisons && comparisons.map((c,i)=>(<div key={i} className="comparison-card"><div className="comparison-header"><div className="hub-badges"><span className="hub-badge">{c.hub1}</span><span className="vs-text">vs</span><span className="hub-badge">{c.hub2}</span></div></div><div className="comparison-values"><div className="comparison-item"><span className="comparison-label">{c.hub1} Fiscal</span><span className="comparison-value">{c.value1}</span></div><div className="comparison-item"><span className="comparison-label">{c.hub2} Fiscal</span><span className="comparison-value">{c.value2}</span></div><div className="comparison-item"><span className="comparison-label">Delta</span><span className="comparison-value">{c.delta}</span></div></div></div>))}</div></div>
+);
+export default HubComparison;

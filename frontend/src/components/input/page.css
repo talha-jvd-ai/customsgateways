@@ -1,0 +1,3 @@
+.inputDiv { display: flex; flex: 1; flex-direction: column; border-bottom: 1.5px solid #dbdbdb; }
+.inputDiv label { font-size: 14px; font-weight: 400; color: #878c91; }
+.inputDiv input { padding: 10px 0; border: none; border-radius: 5px; outline: none; }

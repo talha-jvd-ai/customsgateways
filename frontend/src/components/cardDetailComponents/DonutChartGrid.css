@@ -1,0 +1,1 @@
+.donut-chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}@media(max-width:900px){.donut-chart-grid{grid-template-columns:1fr}}

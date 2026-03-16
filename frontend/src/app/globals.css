@@ -1,0 +1,36 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+  text-decoration: none;
+  color: #324168;
+}
+:root {
+  --theme: #00004d;
+}
+h1 { font-weight: 500; font-size: 40px; line-height: 48px; }
+h2 { font-weight: 500; font-size: 32px; line-height: 48px; }
+h3 { font-weight: 600; font-size: 18px; line-height: 28px; }
+p { font-weight: 400; font-size: 14px; line-height: 20px; }
+@media (max-width: 900px) {
+  h1 { font-size: 32px; line-height: 40px; }
+  h2 { font-size: 24px; line-height: 32px; }
+}
+button {
+  background-color: #00004d;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 30px;
+  width: 100%;
+  cursor: pointer;
+}
+button:hover { scale: 1.01; }
+button:disabled { background-color: #4b5779; cursor: not-allowed; }
+body { max-width: 100vw; overflow-x: hidden; }

@@ -1,0 +1,9 @@
+.card-details { max-height: 0; overflow: hidden; transition: max-height 0.6s ease; }
+.card-details.expanded { max-height: 2000px; }
+.expanded > .details-content { padding-top: 20px; }
+.details-content { padding: 0 20px 20px 20px; background-color: #f1f5fa; }
+.detail-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0; }
+.detail-row:last-child { border-bottom: none; }
+.detail-label { color: #64748b; font-size: 13px; font-weight: 500; text-transform: capitalize; }
+.detail-value { color: #1e293b; font-size: 13px; font-weight: 600; text-align: right; max-width: 60%; }
+@media (max-width: 900px) { .detail-row { flex-direction: column; gap: 4px; } .detail-value { max-width: 100%; text-align: left; } }

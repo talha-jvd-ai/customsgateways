@@ -1,0 +1,15 @@
+.processing-card { background-color: #f1f5fa; border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
+.processing-active { border-left: 3px solid #668dc9; }
+.card-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; cursor: pointer; transition: background-color 0.2s ease; }
+.card-header:hover { background-color: #e2e8f0; }
+.card-left { display: flex; align-items: center; gap: 16px; flex: 1; }
+.card-badge { background-color: #4b5779; color: white; width: 48px; height: 48px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px; flex-shrink: 0; transition: background-color 0.3s; }
+.badge-completed { background-color: #50CD89; }
+.badge-processing { background-color: #668dc9; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.card-info { flex: 1; }
+.card-info h4 { color: #1e293b; font-size: 16px; font-weight: 600; margin: 0 0 4px 0; }
+.card-info p { color: #64748b; font-size: 13px; margin: 0; }
+.expand-btn { background: none; border: none; font-size: 32px; color: #64748b; cursor: pointer; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease, color 0.2s ease; flex-shrink: 0; line-height: 1; padding: 0; }
+.expand-btn:hover { color: #1e293b; }
+@media (max-width: 900px) { .card-left { gap: 12px; } .card-badge { width: 40px; height: 40px; font-size: 12px; } .card-info h4 { font-size: 14px; } .card-info p { font-size: 12px; } }
